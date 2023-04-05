@@ -3,11 +3,13 @@
 
 @section('content')
     @if (session('success'))
-        <p>{{ session('success') }}</p>
+        <div class="mx-5 mb-4 border border-blue-400 text-blue-700 px-4 py-3 rounded relative" role="alert">
+            <span class="block sm:inline text-blue">{{ session('success') }}</span>
+        </div>
     @endif
     
     <h1 class="text-center mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl"><span
-            class="bg-gray-50 dark:bg-gray-700 dark:text-gray-50 rounded-lg px-2">Daftar Produk</span>.</h1>
+            class="bg-gray-50 dark:bg-gray-700 dark:text-gray-50 rounded-lg px-2">Daftar Produk</span></h1>
 
     <div class="m-5">
         <div class="my-[1%] relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -40,8 +42,7 @@
                     @endphp
                     @foreach ($produks as $produk)
                         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                            <th class="px-6 py-4">
-                                {{ $order++ }}</th>
+                            <th class="px-6 py-4">{{ $order++ }}</th>
                             <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">{{ $produk->nama }}</td>
                             <td class="px-6 py-4">{{ $produk->deskripsi }}</td>
                             <td class="px-6 py-4">{{ $produk->harga }}</td>

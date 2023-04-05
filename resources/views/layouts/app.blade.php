@@ -2,7 +2,7 @@
 <html lang="en">
 @include('layouts.head')
 
-<body>
+<body class="bg-gray-300">
     @if (Auth::check())
         @include('layouts.header')
     @endif
